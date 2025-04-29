@@ -1,22 +1,30 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
+class IdadeInvalidaException extends Exception{
+    IdadeInvalidaException(String mensagem){
+        super(mensagem);
+    }
+}
+
+
 public class TesteErro{
+    
+    public static void verificarIdade(int idade) throws IdadeInvalidaException{
+        if(idade < 0 && idade < 18){
+            throw new IdadeInvalidaException("Idade Invalida");
+        }
+
+        System.out.println("Idade válida");
+    }
     public static void main(String[] args){
         try {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Digite seu cpf: ");
-            int cpf = input.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println("Erro ao inserir cpf");
-            System.out.println(e);
+            verificarIdade(15);
+        } catch (IdadeInvalidaException e) {
+            System.out.println("erro: " + e);
         }
-        
-        public static int divisao(int num, int deno){
-            return num / deno;
-        }
-    }
 
-    
+    }
 }
+    
+
 
