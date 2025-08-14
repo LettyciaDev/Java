@@ -1,4 +1,4 @@
-classs StackNode{
+class StackNode{
     private Integer info;
     private StackNode prox;
 
