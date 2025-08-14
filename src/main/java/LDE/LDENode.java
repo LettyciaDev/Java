@@ -1,5 +1,3 @@
-package LDE;
-
 class LDENode{
      private Produto info;
      private LDENode prox;
