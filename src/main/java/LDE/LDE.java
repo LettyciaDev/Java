@@ -1,4 +1,4 @@
-
+import Models.Produto;
 public class LDE{
     private LDENode primeiro;
     private LDENode ultimo;
@@ -45,6 +45,8 @@ public class LDE{
     }
 
     public LDENode buscar(String codigo) {
+        /*Produto pAux = new Produto(C);
+        LDENode aux = this.primeiro;*/ 
         LDENode atual = primeiro;
         while (atual != null) {
             if (atual.getInfo().getCodigo().equals(codigo)) {
